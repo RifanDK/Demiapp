@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_gravity="top">
+
+    <!-- ImageView for the title -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/register_your_account"
+        android:layout_marginBottom="24dp" />
+
+    <!-- TextView for the description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Role kamu terlebih dahulu sebelum login"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="80dp" />
+
+    <!-- Button 1: Sebagai Pasien -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/as_patient_button"
+            android:layout_height="wrap_content"
+            android:background="@drawable/as_patient_button"
+            android:padding="16dp" />
+    </LinearLayout>
+
+    <!-- Button 2: Sebagai Keluarga -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/as_family_button"
+            android:layout_height="wrap_content"
+            android:background="@drawable/as_family_button"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".HeartRateActivity">
+
+    <!-- Toolbar with back button and title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Back button -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_button"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Detak Jantung Pasien"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="60dp" />
+    </LinearLayout>
+
+    <!-- Circle background with heart rate measurement -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp">
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="380dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengukur Detak Jantung"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/heart_rate_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="086"
+                    android:textSize="64sp"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/heart_red"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="4dp"
+                android:background="@android:color/black"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:background="@android:color/holo_blue_dark"
+                    android:layout_marginRight="8dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:background="@android:color/holo_green_dark"
+                    android:layout_marginRight="8dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:background="@android:color/holo_red_dark" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Last checked heart rate section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pengecekan Terakhir"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="8dp"
+        android:gravity="left"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_background"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart_red"
+                android:paddingRight="8dp" />
+
+            <TextView
+                android:id="@+id/last_heart_rate_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="091"
+                android:textSize="32sp"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bpm"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/last_checked_time_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17:07:52"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="left"
+            android:layout_marginLeft="50dp"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -34,6 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {
@@ -52,6 +53,8 @@ dependencies {
     implementation("com.google.maps.android:android-maps-utils:2.3.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
 
 
 }

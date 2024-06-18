@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">testmap</string>
+    <string name="app_name">Demiapp</string>
+    <string name="nama_pasien">nama</string>
+    <string name="back_button">Back</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="google_maps_key">AIzaSyARQpXsLnAF2GgSxLhVfMEcQXztNRTJ_yo</string>
 </resources>
