@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+    <item
+        android:id="@+id/nav_account_info"
+        android:icon="@drawable/account_icon"
+        android:title="Informasi Akun" />
+    <item
+        android:id="@+id/nav_heart_monitor"
+        android:icon="@drawable/heart_black_icon"
+        android:title="Pantau Detak Jantung" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/logout_icon"
+        android:title="LOGOUT"
+        android:titleTextColor="@color/white"
+        android:background="@drawable/logout_button"
+        android:layout_gravity="bottom"/>
+</menu>
