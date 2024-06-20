@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.test123.testmap.R
 import java.util.*
 
 class PatientRegisterActivity : AppCompatActivity() {
@@ -41,9 +40,12 @@ class PatientRegisterActivity : AppCompatActivity() {
         backButton = findViewById(R.id.kembali_button)
         datePickerButton = findViewById(R.id.btn_date_picker)
 
+        // Get role from intent
+        val role = intent.getStringExtra("role")
+
         // Set click listeners
         registerButton.setOnClickListener {
-            registerUser()
+            registerUser(role)
         }
 
         backButton.setOnClickListener {
@@ -77,7 +79,7 @@ class PatientRegisterActivity : AppCompatActivity() {
         datePickerDialog.show()
     }
 
-    private fun registerUser() {
+    private fun registerUser(role: String?) {
         val username = usernameEditText.text.toString().trim()
         val phoneNumber = phoneNumberEditText.text.toString().trim()
         val address = addressEditText.text.toString().trim()
@@ -113,10 +115,12 @@ class PatientRegisterActivity : AppCompatActivity() {
 
         // TODO: Send this data to the backend API
 
-        Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
-
-        // Navigate back to the profile switch activity
-        val intent = Intent(this, ProfileSwitchActivity::class.java)
+        // Navigate to the patient profile activity
+        val intent = Intent(this, PatientProfileActivity::class.java)
+        intent.putExtra("RegistrationPatient", registrationData)
+        intent.putExtra("LoginAs", role)
         startActivity(intent)
+
+        Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
     }
 }

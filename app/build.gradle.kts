@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id ("kotlin-android")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -55,6 +57,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation("com.squareup.picasso:picasso:2.71828")
 
 
 }

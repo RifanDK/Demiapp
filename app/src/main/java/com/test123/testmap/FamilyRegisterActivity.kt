@@ -28,9 +28,12 @@ class FamilyRegisterActivity : AppCompatActivity() {
         registerButton = findViewById(R.id.register_button)
         backButton = findViewById(R.id.kembali_button)
 
+        // Get role from intent
+        val role = intent.getStringExtra("role")
+
         // Set click listeners
         registerButton.setOnClickListener {
-            registerUser()
+            registerUser(role)
         }
 
         backButton.setOnClickListener {
@@ -40,7 +43,7 @@ class FamilyRegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun registerUser() {
+    private fun registerUser(role: String?) {
         val username = usernameEditText.text.toString().trim()
         val phoneNumber = phoneNumberEditText.text.toString().trim()
         val password = passwordEditText.text.toString().trim()
@@ -59,6 +62,12 @@ class FamilyRegisterActivity : AppCompatActivity() {
         val registrationData = RegistrationFamily(username, phoneNumber, password)
 
         // TODO: Send this data to the backend API
+
+        // Navigate to AccountActivity with role and registration data
+        val intent = Intent(this, FamilyProfileActivity::class.java)
+        intent.putExtra("RegistrationFamily", registrationData)
+        intent.putExtra("LoginAs", role)
+        startActivity(intent)
 
         Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
     }

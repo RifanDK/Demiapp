@@ -2,7 +2,6 @@ package com.test123.testmap
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
@@ -20,11 +19,13 @@ class ProfileSwitchActivity : AppCompatActivity() {
 
         asPatientButton.setOnClickListener {
             val intent = Intent(this@ProfileSwitchActivity, PatientRegisterActivity::class.java)
+            intent.putExtra("role", "Pasien")
             startActivity(intent)
         }
 
         asFamilyButton.setOnClickListener {
             val intent = Intent(this@ProfileSwitchActivity, FamilyRegisterActivity::class.java)
+            intent.putExtra("role", "Keluarga")
             startActivity(intent)
         }
     }
