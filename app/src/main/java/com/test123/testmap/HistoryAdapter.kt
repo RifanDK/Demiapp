@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class HistoryAdapter(private val historyList: List<HistoryItem>) :
-    RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() {
+class HistoryAdapter(private val historyList: List<HistoryItem>) : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_history, parent, false)
@@ -15,15 +14,15 @@ class HistoryAdapter(private val historyList: List<HistoryItem>) :
     }
 
     override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
-        val item = historyList[position]
-        holder.tvStartPoint.text = item.startPoint
-        holder.tvEndPoint.text = item.endPoint
+        val historyItem = historyList[position]
+        holder.startPointTextView.text = historyItem.startPoint
+        holder.endPointTextView.text = historyItem.endPoint
     }
 
     override fun getItemCount() = historyList.size
 
     class HistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvStartPoint: TextView = itemView.findViewById(R.id.tv_start_point)
-        val tvEndPoint: TextView = itemView.findViewById(R.id.tv_end_point)
+        val startPointTextView: TextView = itemView.findViewById(R.id.start_point_text)
+        val endPointTextView: TextView = itemView.findViewById(R.id.end_point_text)
     }
 }

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".DataPasienActivity">
+    tools:context=".ListPasienActivity">
 
     <!-- Back button and title -->
     <LinearLayout
@@ -44,122 +44,13 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <!-- Repeatable patient data section -->
-            <LinearLayout
+            <!-- RecyclerView for patient data -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp">
-
-                <!-- Patient data container -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/border_background"
-                    android:padding="16dp"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/pasien_icon"
-                        android:contentDescription="@string/patient_image" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Terhubung Dengan Pasien [name]"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/black"
-                        android:layout_marginStart="16dp" />
-                </LinearLayout>
-
-                <!-- Phone number section -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nomor Telepon"
-                    android:textSize="14sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginBottom="4dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edit_text_background"
-                    android:padding="8dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="081234567890"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="16dp">
-
-                <!-- Patient data container -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/border_background"
-                    android:padding="16dp"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/pasien_icon"
-                        android:contentDescription="@string/patient_image" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Terhubung Dengan Pasien [name]"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/black"
-                        android:layout_marginStart="16dp" />
-                </LinearLayout>
-
-                <!-- Phone number section -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nomor Telepon"
-                    android:textSize="14sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginBottom="4dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edit_text_background"
-                    android:padding="8dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="081234567890"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Repeat the above LinearLayout block for each patient -->
-
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="16dp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

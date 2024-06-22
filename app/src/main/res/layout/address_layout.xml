@@ -139,4 +139,14 @@
             android:paddingTop="12dp" />
     </LinearLayout>
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/add_destination_button"
+        android:id="@+id/send_backend_button">
+
+    </ImageButton>
+
 </LinearLayout>

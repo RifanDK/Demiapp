@@ -92,56 +92,6 @@
                 android:background="@color/gray"
                 android:padding="8dp" />
 
-            <!-- Address -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alamat"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-                android:id="@+id/address_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/gray"
-                android:padding="8dp" />
-
-            <!-- Family -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Keluarga"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-                android:id="@+id/family_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/gray"
-                android:padding="8dp" />
-
-            <!-- Family Phone Number -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="No Telepon Keluarga"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-                android:id="@+id/family_phone_number_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/gray"
-                android:padding="8dp" />
 
             <!-- Login As -->
             <TextView
@@ -159,7 +109,7 @@
                 android:background="@android:color/darker_gray"
                 android:padding="8dp"
                 android:layout_marginTop="4dp"
-                android:text="Pasien" />
+                android:text="Keluarga" />
 
             <!-- Logout Button -->
             <ImageButton

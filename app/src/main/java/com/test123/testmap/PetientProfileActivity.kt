@@ -64,7 +64,7 @@ class PatientProfileActivity : AppCompatActivity() {
 
         backButton.setOnClickListener {
             // Navigate back to MainActivityPatient
-            val intent = Intent(this, MainActivityPatient::class.java)
+            val intent = Intent(this@PatientProfileActivity, MainActivityPatient::class.java)
             startActivity(intent)
             finish()
         }

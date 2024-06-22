@@ -46,6 +46,27 @@ class AddressActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        // Send data to backend and HistoryActivity
+        val sendBackendButton: ImageButton = findViewById(R.id.send_backend_button)
+        sendBackendButton.setOnClickListener {
+            sendDataToBackend()
+            sendDataToHistoryActivity()
+        }
+    }
+
+    private fun sendDataToBackend() {
+        //TODO
+        // Kode untuk mengirim data ke backend
+
+
+    }
+
+    private fun sendDataToHistoryActivity() {
+        val intent = Intent(this, HistoryActivity::class.java)
+        intent.putExtra("HOME_ADDRESS", homeAddress)
+        intent.putExtra("DESTINATION_ADDRESS", destinationAddress)
+        startActivity(intent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
